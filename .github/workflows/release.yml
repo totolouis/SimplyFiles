@@ -8,7 +8,7 @@ on:
 
 env:
   REGISTRY: docker.io
-  IMAGE_PREFIX: docker.io/${{ DOCKER_USERNAME }}/simplyfiles
+  IMAGE_PREFIX: docker.io/${{ vars.DOCKER_USERNAME }}/simplyfiles
 
 jobs:
   # Reuse the CI workflow for testing
