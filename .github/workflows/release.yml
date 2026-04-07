@@ -39,7 +39,7 @@ jobs:
       - name: Login to Docker Hub
         uses: docker/login-action@v4
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: ${{ vars.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Set up QEMU (for multi-arch builds)
@@ -57,8 +57,8 @@ jobs:
           build-args: |
             APP_VERSION=${{ steps.version.outputs.VERSION }}
           tags: |
-            totolouis/${{ env.IMAGE_PREFIX }}-api:${{ steps.version.outputs.VERSION }}
-            totolouis/${{ env.IMAGE_PREFIX }}-api:latest
+            ${{ env.IMAGE_PREFIX }}-api:${{ steps.version.outputs.VERSION }}
+            ${{ env.IMAGE_PREFIX }}-api:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
