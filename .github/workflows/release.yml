@@ -15,13 +15,13 @@ jobs:
     uses: ./.github/workflows/ci.yml
 
   # Reuse SonarCloud analysis
-  # sonar:
-  #   uses: ./.github/workflows/sonarcloud.yml
-  #   secrets:
-  #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+  sonar:
+    uses: ./.github/workflows/sonarcloud.yml
+    secrets:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
   build-and-push:
-    needs: [test]
+    needs: [test, sonar]
     runs-on: ubuntu-latest
     permissions:
       contents: write
