@@ -72,8 +72,8 @@ jobs:
             APP_VERSION=${{ steps.version.outputs.VERSION }}
             MAX_FOLDER_DEPTH=${{ vars.MAX_FOLDER_DEPTH || '5' }}
           tags: |
-            ${{ env.IMAGE_PREFIX }}/frontend:${{ steps.version.outputs.VERSION }}
-            ${{ env.IMAGE_PREFIX }}/frontend:latest
+            ${{ env.IMAGE_PREFIX }}-frontend:${{ steps.version.outputs.VERSION }}
+            ${{ env.IMAGE_PREFIX }}-frontend:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
