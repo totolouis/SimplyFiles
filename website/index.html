@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SimplyFiles — Your Files. Your Server. Your Rules.</title>
+  <meta name="description" content="Self-hosted file management with full-text search in under 50ms. Own your data." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <span class="nav__logo-icon">
+          <svg width="28" height="28" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="512" height="512" rx="96" fill="#141414"/>
+            <rect x="120" y="80" width="200" height="280" rx="16" fill="#e8ff47"/>
+            <rect x="320" y="80" width="72" height="280" rx="0 16 16 0" fill="#b8cc38"/>
+            <rect x="160" y="300" width="192" height="132" rx="16" fill="#e8ff47"/>
+            <rect x="220" y="340" width="72" height="52" rx="8" fill="#141414"/>
+            <circle cx="256" cy="420" r="12" fill="#141414"/>
+          </svg>
+        </span>
+        <span class="nav__logo-text">SimplyFiles</span>
+      </a>
+      <div class="nav__links">
+        <a href="#features">Features</a>
+        <a href="#search">Search</a>
+        <a href="#deploy">Deploy</a>
+        <a href="https://github.com/LouisLmusic/SimplyFiles" class="nav__cta" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </div>
+      <button class="nav__burger" id="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero__grid-bg"></div>
+    <div class="hero__glow"></div>
+    <div class="hero__content">
+      <div class="hero__badge">Self-Hosted &middot; Open Source &middot; Zero Tracking</div>
+      <h1 class="hero__title">
+        Your files.<br />
+        <span class="hero__title--accent">Your server.</span><br />
+        Your rules.
+      </h1>
+      <p class="hero__subtitle">
+        A modern, self-hosted file manager built on top of your actual filesystem — not a database. Full-text search in under 50ms. Deploy with a single command. No cloud. No subscriptions. No compromises.
+      </p>
+      <div class="hero__actions">
+        <a href="#deploy" class="btn btn--primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Deploy Now
+        </a>
+        <a href="#features" class="btn btn--ghost">See Features</a>
+      </div>
+    </div>
+    <div class="hero__preview">
+      <div class="hero__browser">
+        <div class="hero__browser-bar">
+          <span class="dot dot--red"></span>
+          <span class="dot dot--yellow"></span>
+          <span class="dot dot--green"></span>
+          <span class="hero__browser-url">https://files.yourdomain.com</span>
+        </div>
+        <div class="hero__browser-body">
+          <img src="dashboard.png" alt="SimplyFiles dashboard — file browser with nested folders" style="width:100%;display:block;" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS TICKER ===== -->
+  <section class="ticker">
+    <div class="ticker__inner">
+      <div class="ticker__item">
+        <span class="ticker__value">&lt;50ms</span>
+        <span class="ticker__label">Full-text search</span>
+      </div>
+      <div class="ticker__sep"></div>
+      <div class="ticker__item">
+        <span class="ticker__value">1 cmd</span>
+        <span class="ticker__label">To deploy</span>
+      </div>
+      <div class="ticker__sep"></div>
+      <div class="ticker__item">
+        <span class="ticker__value">500MB</span>
+        <span class="ticker__label">Max upload</span>
+      </div>
+      <div class="ticker__sep"></div>
+      <div class="ticker__item">
+        <span class="ticker__value">PWA</span>
+        <span class="ticker__label">Install anywhere</span>
+      </div>
+      <div class="ticker__sep"></div>
+      <div class="ticker__item">
+        <span class="ticker__value">0</span>
+        <span class="ticker__label">Tracking scripts</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES ===== -->
+  <section class="features" id="features">
+    <div class="section__header">
+      <span class="section__tag">Features</span>
+      <h2 class="section__title">Everything you need.<br /><span class="text--accent">Nothing you don't.</span></h2>
+      <p class="section__sub">No bloat, no gimmicks. Just a clean, fast file manager that stays out of your way.</p>
+    </div>
+
+    <div class="features__grid">
+      <div class="feature-card feature-card--wide">
+        <div class="feature-card__icon feature-card__icon--yellow">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>Nested Folders</h3>
+        <p>Organize files your way with unlimited folder nesting, drag-and-drop, and instant navigation. Create symlinks for cross-referencing without duplication.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-card__icon feature-card__icon--blue">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <h3>Full-Text Search</h3>
+        <p>PostgreSQL BM25-powered search across all your documents. PDFs, text files, code — indexed and searchable in milliseconds.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-card__icon feature-card__icon--green">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h3>File Preview</h3>
+        <p>Preview images, PDFs, videos, audio, code, and markdown directly in the browser. No downloads needed.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-card__icon feature-card__icon--purple">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3>PWA Ready</h3>
+        <p>Install on any device — desktop, tablet, or phone. Works offline with service worker caching. Feels native, runs everywhere.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-card__icon feature-card__icon--pink">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+        </div>
+        <h3>Keyboard First</h3>
+        <p>Power-user shortcuts for everything. Search with <kbd>/</kbd>, upload with <kbd>u</kbd>, navigate with speed. Your hands never leave the keyboard.</p>
+      </div>
+
+      <div class="feature-card feature-card--wide">
+        <div class="feature-card__icon feature-card__icon--red">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Self-Hosted &amp; Private</h3>
+        <p>Your files never leave your infrastructure. No third-party APIs, no telemetry, no vendor lock-in. Docker Compose up and you're live. Compatible with Paperless-ngx scanning workflows.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-card__icon feature-card__icon--yellow">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <h3>Favorites</h3>
+        <p>Pin your most-used files and folders. One click to star, instant access from the sidebar.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-card__icon feature-card__icon--blue">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-2 14H7L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+        </div>
+        <h3>Trash &amp; Restore</h3>
+        <p>Soft-delete with confidence. Every deleted file goes to trash first. Restore with one click when you change your mind.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FILESYSTEM SHOWCASE ===== -->
+  <section class="filesystem" id="filesystem">
+    <div class="section__header">
+      <span class="section__tag">Architecture</span>
+      <h2 class="section__title">Not a database.<br /><span class="text--accent">Your actual filesystem.</span></h2>
+      <p class="section__sub">SimplyFiles is a frontend built directly on top of your OS filesystem. Your files are real files on disk — not blobs trapped in a database. Mount a Docker volume and your data persists exactly where you expect it. Works on any OS, but best on Linux where symlink support unlocks the full feature set.</p>
+    </div>
+    <div class="filesystem__diagram">
+      <div class="fs__flow">
+        <div class="fs__node fs__node--app">
+          <div class="fs__node-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <span class="fs__node-label">SimplyFiles UI</span>
+        </div>
+        <div class="fs__arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+        </div>
+        <div class="fs__node fs__node--api">
+          <div class="fs__node-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <span class="fs__node-label">NestJS API</span>
+        </div>
+        <div class="fs__arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+        </div>
+        <div class="fs__node fs__node--fs">
+          <div class="fs__node-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <span class="fs__node-label">Linux Filesystem</span>
+        </div>
+      </div>
+      <div class="fs__details">
+        <div class="fs__detail">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Files stored as real files on disk — browse them with <code>ls</code> if you want</span>
+        </div>
+        <div class="fs__detail">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Docker volume mount = instant persistence and portability</span>
+        </div>
+        <div class="fs__detail">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Drop files directly into the data folder — SimplyFiles auto-syncs them</span>
+        </div>
+        <div class="fs__detail">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>No vendor lock-in — your files are always yours, in standard formats</span>
+        </div>
+      </div>
+      <div class="fs__terminal">
+        <div class="terminal__bar">
+          <span class="dot dot--red"></span>
+          <span class="dot dot--yellow"></span>
+          <span class="dot dot--green"></span>
+          <span class="terminal__title">docker-compose.yml</span>
+        </div>
+        <div class="terminal__body">
+          <div class="terminal__line"><span class="terminal__cmd"><span style="color:var(--blue)">volumes:</span></span></div>
+          <div class="terminal__line"><span class="terminal__cmd">  - <span style="color:var(--accent)">./data/files:/app/data/files</span>  <span style="color:var(--text-dim)"># your files, on your disk</span></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SEARCH SHOWCASE ===== -->
+  <section class="showcase" id="search">
+    <div class="showcase__bg-text">SEARCH</div>
+    <div class="section__header">
+      <span class="section__tag">Search</span>
+      <h2 class="section__title">Find anything.<br /><span class="text--accent">Instantly.</span></h2>
+      <p class="section__sub">Full-text content search powered by PostgreSQL. Every document is chunked, indexed, and searchable the moment it's uploaded.</p>
+    </div>
+    <div class="showcase__content">
+      <div class="showcase__preview">
+        <div class="showcase__browser">
+          <div class="hero__browser-bar">
+            <span class="dot dot--red"></span>
+            <span class="dot dot--yellow"></span>
+            <span class="dot dot--green"></span>
+            <span class="hero__browser-url">Search results</span>
+          </div>
+          <div class="hero__browser-body">
+            <img src="search.png" alt="SimplyFiles full-text search results" style="width:100%;display:block;" />
+          </div>
+        </div>
+      </div>
+      <div class="showcase__details">
+        <div class="showcase__stat">
+          <span class="showcase__stat-value">&lt;50ms</span>
+          <span class="showcase__stat-label">Average query time</span>
+        </div>
+        <ul class="showcase__list">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e8ff47" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            BM25 ranking via PostgreSQL <code>websearch_to_tsquery</code>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e8ff47" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            PDF, DOCX, and plain-text extraction
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e8ff47" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            OCR support via Tesseract.js
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e8ff47" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Smart content chunking for relevant snippets
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e8ff47" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            GIN-indexed for constant-time lookups
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PREVIEW SHOWCASE ===== -->
+  <section class="showcase showcase--reverse" id="preview">
+    <div class="section__header">
+      <span class="section__tag">Preview</span>
+      <h2 class="section__title">Preview everything.<br /><span class="text--accent">Download nothing.</span></h2>
+      <p class="section__sub">Images, PDFs, videos, audio, code, markdown — all rendered inline. Dark and light themes included.</p>
+    </div>
+    <div class="showcase__content showcase__content--reverse">
+      <div class="showcase__preview">
+        <div class="showcase__browser">
+          <div class="hero__browser-bar">
+            <span class="dot dot--red"></span>
+            <span class="dot dot--yellow"></span>
+            <span class="dot dot--green"></span>
+            <span class="hero__browser-url">File preview</span>
+          </div>
+          <div class="hero__browser-body">
+            <img src="file-preview.png" alt="SimplyFiles inline file preview" style="width:100%;display:block;" />
+          </div>
+        </div>
+      </div>
+      <div class="showcase__details">
+        <div class="showcase__formats">
+          <span class="format-tag format-tag--img">Images</span>
+          <span class="format-tag format-tag--pdf">PDF</span>
+          <span class="format-tag format-tag--video">Video</span>
+          <span class="format-tag format-tag--audio">Audio</span>
+          <span class="format-tag format-tag--code">Code</span>
+          <span class="format-tag format-tag--text">Markdown</span>
+          <span class="format-tag format-tag--text">CSV</span>
+          <span class="format-tag format-tag--text">JSON</span>
+          <span class="format-tag format-tag--text">Logs</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MOBILE ===== -->
+  <section class="mobile" id="mobile">
+    <div class="section__header">
+      <span class="section__tag">Mobile</span>
+      <h2 class="section__title">Desktop power.<br /><span class="text--accent">Pocket size.</span></h2>
+      <p class="section__sub">Fully responsive with touch-optimized bottom sheets, swipe gestures, and installable as a PWA on any device.</p>
+    </div>
+    <div class="mobile__phones">
+      <div class="mobile__phone mobile__phone--left">
+        <div class="mobile__screen">
+          <img src="mobile-preview2.png" alt="SimplyFiles mobile sidebar navigation" style="width:100%;display:block;" />
+        </div>
+      </div>
+      <div class="mobile__phone mobile__phone--center">
+        <div class="mobile__screen">
+          <img src="mobile-preview1.png" alt="SimplyFiles mobile file browser" style="width:100%;display:block;" />
+        </div>
+      </div>
+      <div class="mobile__phone mobile__phone--right">
+        <div class="mobile__screen">
+          <img src="mobile-preview2.png" alt="SimplyFiles mobile sidebar" style="width:100%;display:block;" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== KEYBOARD SHORTCUTS ===== -->
+  <section class="shortcuts">
+    <div class="section__header">
+      <span class="section__tag">Shortcuts</span>
+      <h2 class="section__title">Built for<br /><span class="text--accent">speed demons.</span></h2>
+    </div>
+    <div class="shortcuts__grid">
+      <div class="shortcut">
+        <kbd>/</kbd>
+        <span>Search</span>
+      </div>
+      <div class="shortcut">
+        <kbd>n</kbd>
+        <span>New folder</span>
+      </div>
+      <div class="shortcut">
+        <kbd>u</kbd>
+        <span>Upload</span>
+      </div>
+      <div class="shortcut">
+        <kbd>s</kbd>
+        <span>Toggle sidebar</span>
+      </div>
+      <div class="shortcut">
+        <kbd>r</kbd>
+        <span>Refresh</span>
+      </div>
+      <div class="shortcut">
+        <kbd>g</kbd>
+        <span>Go to root</span>
+      </div>
+      <div class="shortcut">
+        <kbd>f</kbd>
+        <span>Jump to folder</span>
+      </div>
+      <div class="shortcut">
+        <kbd>l</kbd>
+        <span>Create symlink</span>
+      </div>
+      <div class="shortcut">
+        <kbd>e</kbd>
+        <span>Rename</span>
+      </div>
+      <div class="shortcut">
+        <kbd>d</kbd>
+        <span>Delete</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DEPLOY ===== -->
+  <section class="deploy" id="deploy">
+    <div class="deploy__glow"></div>
+    <div class="section__header">
+      <span class="section__tag">Deploy</span>
+      <h2 class="section__title">One command.<br /><span class="text--accent">That's it.</span></h2>
+      <p class="section__sub">Docker Compose handles everything — database, API, frontend, reverse proxy. You're live in under a minute.</p>
+    </div>
+    <div class="deploy__terminal">
+      <div class="terminal__bar">
+        <span class="dot dot--red"></span>
+        <span class="dot dot--yellow"></span>
+        <span class="dot dot--green"></span>
+        <span class="terminal__title">Terminal</span>
+      </div>
+      <div class="terminal__body">
+        <div class="terminal__line">
+          <span class="terminal__prompt">$</span>
+          <span class="terminal__cmd">git clone https://github.com/LouisLMusic/SimplyFiles.git</span>
+        </div>
+        <div class="terminal__line">
+          <span class="terminal__prompt">$</span>
+          <span class="terminal__cmd">cd SimplyFiles</span>
+        </div>
+        <div class="terminal__line">
+          <span class="terminal__prompt">$</span>
+          <span class="terminal__cmd">docker compose up -d</span>
+        </div>
+        <div class="terminal__line terminal__line--output">
+          <span class="terminal__output">
+            <span class="terminal__success">&#10003;</span> Container simplyfiles-db      Started<br />
+            <span class="terminal__success">&#10003;</span> Container simplyfiles-api     Started<br />
+            <span class="terminal__success">&#10003;</span> Container simplyfiles-web     Started<br />
+          </span>
+        </div>
+        <div class="terminal__line terminal__line--highlight">
+          <span class="terminal__prompt">&gt;</span>
+          <span class="terminal__cmd terminal__cmd--accent">Ready at http://localhost:3000</span>
+        </div>
+      </div>
+    </div>
+    <div class="deploy__stack">
+      <div class="stack-tag">React</div>
+      <div class="stack-tag">NestJS</div>
+      <div class="stack-tag">PostgreSQL</div>
+      <div class="stack-tag">Docker</div>
+      <div class="stack-tag">Nginx</div>
+      <div class="stack-tag">TypeORM</div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta">
+    <div class="cta__content">
+      <h2 class="cta__title">Stop renting your file storage.</h2>
+      <p class="cta__sub">SimplyFiles is free, open-source, and yours forever. Deploy it today.</p>
+      <div class="cta__actions">
+        <a href="https://github.com/LouisLMusic/SimplyFiles" class="btn btn--primary btn--lg" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          View on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="nav__logo-text">SimplyFiles</span>
+        <p>Self-hosted file management done right.</p>
+      </div>
+      <div class="footer__links">
+        <a href="https://github.com/LouisLMusic/SimplyFiles" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/LouisLMusic/SimplyFiles/issues" target="_blank" rel="noopener">Issues</a>
+        <a href="https://github.com/LouisLMusic/SimplyFiles/blob/master/LICENSE" target="_blank" rel="noopener">License</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

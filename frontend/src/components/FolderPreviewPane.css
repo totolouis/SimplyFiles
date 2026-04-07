@@ -1,0 +1,62 @@
+.folder-preview-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  background: var(--bg);
+}
+
+.folder-preview-icon-wrap {
+  color: #f5c542;
+  margin-bottom: 16px;
+}
+
+.folder-preview-info {
+  text-align: center;
+}
+
+.folder-preview-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 6px 0;
+}
+
+.folder-preview-type {
+  font-size: 12px;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.preview-rename-form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.preview-rename-input {
+  flex: 1;
+  min-width: 0;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+  background: var(--bg-2);
+  border: 1px solid var(--border-bright);
+  border-radius: var(--radius);
+  outline: none;
+}
+
+.preview-rename-input:focus {
+  border-color: var(--text-3);
+}
+
+.preview-rename-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

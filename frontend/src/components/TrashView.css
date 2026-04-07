@@ -1,0 +1,191 @@
+.trash-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+.trash-panel {
+  width: min(480px, 90vw);
+  max-height: 80vh;
+  background: var(--bg-1);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.trash-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.trash-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.trash-count {
+  font-size: 11px;
+  font-weight: 500;
+  background: var(--bg-3);
+  color: var(--text-2);
+  padding: 1px 6px;
+  border-radius: 10px;
+}
+
+.trash-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trash-empty-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: var(--radius);
+  font-size: 11px;
+  color: var(--text-3);
+  transition: background 0.1s, color 0.1s;
+}
+.trash-empty-btn:hover {
+  background: var(--red-dim);
+  color: var(--red);
+}
+.trash-empty-btn.confirm {
+  background: var(--red-dim);
+  color: var(--red);
+}
+
+.trash-close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius);
+  color: var(--text-3);
+  transition: background 0.1s, color 0.1s;
+}
+.trash-close-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text);
+}
+
+.trash-info {
+  padding: 8px 16px;
+  font-size: 11px;
+  color: var(--text-3);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.trash-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 4px 0;
+}
+
+.trash-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: var(--text-3);
+}
+
+.trash-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 40px;
+  color: var(--text-3);
+}
+.trash-empty p {
+  font-size: 13px;
+}
+
+.trash-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  transition: background 0.1s;
+}
+.trash-item:hover {
+  background: var(--bg-hover);
+}
+
+.trash-item-icon {
+  color: var(--text-3);
+  flex-shrink: 0;
+}
+
+.trash-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.trash-item-name {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.trash-item-meta {
+  font-size: 11px;
+  color: var(--text-3);
+  margin-top: 1px;
+}
+
+.trash-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+.trash-item:hover .trash-item-actions {
+  opacity: 1;
+}
+
+.trash-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius);
+  color: var(--text-3);
+  transition: background 0.1s, color 0.1s;
+}
+
+.trash-action-btn.restore-btn:hover {
+  background: var(--accent-dim2);
+  color: var(--accent);
+}
+
+.trash-action-btn.delete-forever-btn:hover {
+  background: var(--red-dim);
+  color: var(--red);
+}
+
+.trash-action-btn:disabled {
+  opacity: 0.5;
+}

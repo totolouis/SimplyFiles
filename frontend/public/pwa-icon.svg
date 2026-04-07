@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" rx="108" fill="#141414"/>
+
+  <!-- Document body - filled shape with cutout -->
+  <path d="
+    M148 80 L308 80 L372 144 L372 432 L148 432 Z
+    M164 96 L164 416 L356 416 L356 152 L300 152 L300 96 Z
+  " fill="#e8ff47" fill-rule="evenodd"/>
+
+  <!-- Folded corner triangle -->
+  <path d="M308 80 L308 144 L372 144 Z" fill="#b8cc2a"/>
+
+  <!-- Lock circle ring - filled donut -->
+  <circle cx="260" cy="244" r="48" fill="#e8ff47"/>
+  <circle cx="260" cy="244" r="32" fill="#141414"/>
+
+  <!-- Keyhole rectangle -->
+  <rect x="248" y="264" width="24" height="44" rx="4" fill="#e8ff47"/>
+
+  <!-- Text lines -->
+  <rect x="192" y="348" width="136" height="12" rx="6" fill="#e8ff47" opacity="0.5"/>
+  <rect x="192" y="376" width="96" height="12" rx="6" fill="#e8ff47" opacity="0.3"/>
+</svg>

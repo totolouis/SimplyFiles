@@ -1,0 +1,32 @@
+.tasks-indicator {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: var(--radius);
+  color: var(--text-2);
+  transition: background 0.1s, color 0.1s;
+}
+.tasks-indicator:hover {
+  background: var(--bg-hover);
+  color: var(--text);
+}
+
+.tasks-indicator-badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  color: var(--on-accent);
+  background: var(--accent);
+  border-radius: 8px;
+}
