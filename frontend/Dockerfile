@@ -1,4 +1,4 @@
-FROM node:20-alpine AS builder
+FROM --platform=$BUILDPLATFORM node:20-alpine AS builder
 
 ARG APP_VERSION=dev
 ARG MAX_FOLDER_DEPTH=5
